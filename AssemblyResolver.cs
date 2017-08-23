@@ -174,7 +174,7 @@ namespace Okin
             var langs = openExeConfiguration == null
                             ? ConfigurationManager.AppSettings["LanguagesDirectories"]
                             : openExeConfiguration.AppSettings.Settings["LanguagesDirectories"].Value;
-            if (this.languagesDirectories != null)
+            if (this.languagesDirectories != null && langs != null)
                 this.languagesDirectories.AddRange(langs.Split(';'));
         }
 
